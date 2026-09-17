@@ -1307,8 +1307,8 @@
             <span>reduction in manual reporting effort</span>
           </div>
           <div class="metric">
-            <strong>95%</strong>
-            <span>lower search latency across 50,000+ indexed documents</span>
+            <strong>10K</strong>
+            <span>documents in a reproducible retrieval scale check</span>
           </div>
         </div>
       </aside>
@@ -1488,23 +1488,23 @@
           </article>
 
           <article class="project-card">
-            <p class="project-meta">Applied ML | FAISS, Embeddings, NLP, Flask</p>
-            <h3>Semantic Search & Plagiarism Detection</h3>
+            <p class="project-meta">Information Retrieval | TF-IDF, Cosine Similarity, Flask</p>
+            <h3>Semantic Search & Similarity Detection</h3>
             <dl>
               <dt>Problem</dt>
-              <dd>Keyword matching made it difficult to detect meaning-level similarity across a large document collection.</dd>
+              <dd>Exact keyword lookup made related documents harder to rank and gave reviewers little evidence for why two passages were considered similar.</dd>
               <dt>Process</dt>
-              <dd>Built a Flask-backed semantic search system using embedding models and FAISS vector search across 50,000+ documents.</dd>
+              <dd>Built a deterministic retrieval baseline using normalized word and phrase vectors, cosine ranking, a Flask API, and sentence-level similarity evidence.</dd>
               <dt>Result</dt>
-              <dd>Reduced search latency by 95% and achieved sub-second retrieval for AI-assisted document discovery.</dd>
+              <dd>Validated the public pipeline with nine tests and a generated 10,000-document scale check: forty repeatable queries achieved a 100% top-1 topic match with 0.88 ms median local latency.</dd>
             </dl>
-            <div class="result-block" aria-label="Search latency result">
-              <div class="stat-line"><span>Latency reduction</span><span>95%</span></div>
-              <div class="bar" aria-hidden="true"><span style="width: 95%;"></span></div>
+            <div class="result-block" aria-label="Synthetic retrieval result">
+              <div class="stat-line"><span>Synthetic top-1 topic match</span><span>100%</span></div>
+              <div class="bar" aria-hidden="true"><span style="width: 100%;"></span></div>
             </div>
             <div class="project-links">
-              <a href="https://github.com/manishapandala" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
-              <a href="mailto:manishapandala4@gmail.com">Request app link</a>
+              <a href="https://github.com/manishapandala/semantic-search-similarity" target="_blank" rel="noopener noreferrer">Source Code</a>
+              <a href="https://manishapandala.github.io/semantic-search-similarity/" target="_blank" rel="noopener noreferrer">Live Project</a>
             </div>
           </article>
 
