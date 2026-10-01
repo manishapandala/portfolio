@@ -1414,7 +1414,7 @@
             <p class="eyebrow">Highlighted Projects</p>
             <h2 id="projects-title">Selected data science and AI/ML work.</h2>
           </div>
-          <p>These projects cover explainable cybersecurity, information retrieval, computer vision, and analytics automation. Each summary separates the research question, implementation, and evidence.</p>
+          <p>These projects cover reliable machine learning, time-series forecasting, explainable cybersecurity, information retrieval, computer vision, and analytics automation. Each summary separates the problem, implementation, and reproducible evidence.</p>
         </div>
 
         <div class="projects">
@@ -1438,11 +1438,53 @@
               </section>
             </div>
 
-            <p class="project-note"><strong>Design decision:</strong> CyberGuard uses traceable rules so each classification can be tied to a specific condition. The public build passes 42 automated tests and exercises six attack categories across a deterministic 5,000-event scale check. Future work proposes a hybrid layer using SVM and Random Forest anomaly detection.</p>
+            <p class="project-note"><strong>Design decision:</strong> CyberGuard uses traceable rules so each classification can be tied to a specific condition. The public build passes 45 automated tests and exercises six attack categories across a deterministic 5,000-event scale check. Future work proposes a hybrid layer using SVM and Random Forest anomaly detection.</p>
             <div class="project-links">
               <a href="https://www.verizon.com/business/resources/T137/reports/2025-dbir-data-breach-investigations-report.pdf" target="_blank" rel="noopener noreferrer">2025 Verizon DBIR</a>
               <a href="https://github.com/manishapandala/cyberguard-zero-trust" target="_blank" rel="noopener noreferrer">Source Code</a>
               <a href="https://manishapandala.github.io/cyberguard-zero-trust/" target="_blank" rel="noopener noreferrer">Live Project</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <p class="project-meta">Reliable ML | Calibration, Thresholding, Drift Monitoring</p>
+            <h3>Model Reliability Lab</h3>
+            <dl>
+              <dt>Problem</dt>
+              <dd>A high classification score is not enough when decisions depend on probability quality, asymmetric error costs, cohort stability, and changing input distributions.</dd>
+              <dt>Process</dt>
+              <dd>Built stratified train, validation, and held-out test partitions; compared calibrated logistic regression with random forest; selected a cost-aware threshold on validation data; and added drift, cohort, and permutation-importance checks.</dd>
+              <dt>Result</dt>
+              <dd>On the 114-row held-out partition of a public diagnostic dataset, the selected model achieved 0.984 average precision, 0.989 ROC AUC, and 0.0445 Brier score with eight automated tests.</dd>
+            </dl>
+            <div class="result-block" aria-label="Held-out reliability result">
+              <div class="stat-line"><span>Held-out average precision</span><span>0.984</span></div>
+              <div class="bar" aria-hidden="true"><span style="width: 98.4%;"></span></div>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/manishapandala/model-reliability-lab" target="_blank" rel="noopener noreferrer">Source Code</a>
+              <a href="https://manishapandala.github.io/model-reliability-lab/" target="_blank" rel="noopener noreferrer">Live Project</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <p class="project-meta">Time Series | Backtesting, Baselines, Prediction Intervals</p>
+            <h3>Demand Forecasting Backtest</h3>
+            <dl>
+              <dt>Problem</dt>
+              <dd>Random data splits and unshifted rolling features can make forecasting systems look better than they will perform on future periods.</dd>
+              <dt>Process</dt>
+              <dd>Built past-only lag and rolling features, chronological train/validation/test partitions, three expanding-window folds, a seasonal-naive baseline, and validation-calibrated prediction intervals.</dd>
+              <dt>Result</dt>
+              <dd>On a deterministic 336-row final holdout, the model reached 4.25% WAPE versus 8.62% for the seven-day baseline—a 50.7% relative improvement—while reporting bias and interval coverage.</dd>
+            </dl>
+            <div class="result-block" aria-label="Generated demand forecasting result">
+              <div class="stat-line"><span>Relative holdout WAPE improvement</span><span>50.7%</span></div>
+              <div class="bar" aria-hidden="true"><span style="width: 50.7%;"></span></div>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/manishapandala/demand-forecasting-backtest" target="_blank" rel="noopener noreferrer">Source Code</a>
+              <a href="https://manishapandala.github.io/demand-forecasting-backtest/" target="_blank" rel="noopener noreferrer">Live Project</a>
             </div>
           </article>
 
@@ -1497,7 +1539,7 @@
               <dt>Process</dt>
               <dd>Built a deterministic retrieval baseline using normalized word and phrase vectors, cosine ranking, a Flask API, and sentence-level similarity evidence.</dd>
               <dt>Result</dt>
-              <dd>Validated the public pipeline with nine tests and a generated 10,000-document scale check: forty repeatable queries achieved a 100% top-1 topic match with 0.88 ms median local latency.</dd>
+              <dd>Validated the public pipeline with 12 tests and a generated 10,000-document scale check: forty repeatable queries achieved a 100% top-1 topic match with 0.88 ms median local latency.</dd>
             </dl>
             <div class="result-block" aria-label="Synthetic retrieval result">
               <div class="stat-line"><span>Synthetic top-1 topic match</span><span>100%</span></div>
