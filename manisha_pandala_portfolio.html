@@ -1331,7 +1331,7 @@
           </article>
           <article class="about-item">
             <h3>Applied AI</h3>
-            <p>My projects include embedding-based search, computer-vision inspection, and rule-based cybersecurity analysis.</p>
+            <p>My projects include evaluated retrieval agents, guarded analytics tools, embedding-based search, computer-vision inspection, and explainable cybersecurity analysis.</p>
           </article>
           <article class="about-item">
             <h3>Evaluation & Explainability</h3>
@@ -1384,6 +1384,8 @@
               <li>Computer Vision</li>
               <li>OpenCV</li>
               <li>DINOv2</li>
+              <li>AI Agent Evaluation</li>
+              <li>Tool Calling & Guardrails</li>
             </ul>
           </article>
           <article class="skill-column">
@@ -1414,7 +1416,7 @@
             <p class="eyebrow">Highlighted Projects</p>
             <h2 id="projects-title">Selected data science and AI/ML work.</h2>
           </div>
-          <p>These projects cover reliable machine learning, time-series forecasting, explainable cybersecurity, information retrieval, computer vision, and analytics automation. Each summary separates the problem, implementation, and reproducible evidence.</p>
+          <p>These projects cover AI agents, retrieval evaluation, guarded tool use, reliable machine learning, forecasting, explainable cybersecurity, computer vision, and analytics automation. Each summary separates the problem, implementation, and reproducible evidence.</p>
         </div>
 
         <div class="projects">
@@ -1443,6 +1445,48 @@
               <a href="https://www.verizon.com/business/resources/T137/reports/2025-dbir-data-breach-investigations-report.pdf" target="_blank" rel="noopener noreferrer">2025 Verizon DBIR</a>
               <a href="https://github.com/manishapandala/cyberguard-zero-trust" target="_blank" rel="noopener noreferrer">Source Code</a>
               <a href="https://manishapandala.github.io/cyberguard-zero-trust/" target="_blank" rel="noopener noreferrer">Live Project</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <p class="project-meta">AI Agents | Agentic RAG, Evaluation, Traceability</p>
+            <h3>Agentic RAG Evaluation Lab</h3>
+            <dl>
+              <dt>Problem</dt>
+              <dd>Retrieval agents can produce fluent answers without enough evidence, while ordinary demos hide query rewrites, retries, and unsupported claims.</dd>
+              <dt>Process</dt>
+              <dd>Built a provider-neutral agent loop that plans, retrieves with an inspectable BM25-style index, verifies evidence coverage, rewrites when needed, cites source IDs, and refuses when evidence is missing.</dd>
+              <dt>Result</dt>
+              <dd>Passed nine automated tests and achieved 100% top-1 topic routing across eight deterministic queries over an 80-document generated corpus, with a complete JSON execution trace.</dd>
+            </dl>
+            <div class="result-block" aria-label="Agentic RAG evaluation result">
+              <div class="stat-line"><span>Deterministic topic routing</span><span>100%</span></div>
+              <div class="bar" aria-hidden="true"><span style="width: 100%;"></span></div>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/manishapandala/agentic-rag-evaluation" target="_blank" rel="noopener noreferrer">Source Code</a>
+              <a href="https://manishapandala.github.io/agentic-rag-evaluation/" target="_blank" rel="noopener noreferrer">Live Project</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <p class="project-meta">AI Agents | Tool Calling, Guardrails, Structured Outputs</p>
+            <h3>Guarded Data Analyst Agent</h3>
+            <dl>
+              <dt>Problem</dt>
+              <dd>An analytics agent needs useful tools without permission to run arbitrary code, alter data, or hide how a business answer was calculated.</dd>
+              <dt>Process</dt>
+              <dd>Built allowlisted tools for schema profiling, aggregation, trends, and anomaly detection; added input guardrails, typed arguments, structured results, and an end-to-end audit trace.</dd>
+              <dt>Result</dt>
+              <dd>Passed ten automated tests and routed five deterministic evaluation questions to the expected tools with 100% accuracy while blocking a side-effect request before execution.</dd>
+            </dl>
+            <div class="result-block" aria-label="Guarded analyst agent result">
+              <div class="stat-line"><span>Tool-routing accuracy</span><span>100%</span></div>
+              <div class="bar" aria-hidden="true"><span style="width: 100%;"></span></div>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/manishapandala/guarded-data-analyst-agent" target="_blank" rel="noopener noreferrer">Source Code</a>
+              <a href="https://manishapandala.github.io/guarded-data-analyst-agent/" target="_blank" rel="noopener noreferrer">Live Project</a>
             </div>
           </article>
 
