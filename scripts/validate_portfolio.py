@@ -7,10 +7,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 PORTFOLIO = ROOT / "manisha_pandala_portfolio.html"
 EXPECTED_REPOSITORIES = {
+    "agentic-rag-evaluation",
     "automated-reporting-workflow",
     "battery-anomaly-detection",
     "cyberguard-zero-trust",
     "demand-forecasting-backtest",
+    "guarded-data-analyst-agent",
     "model-reliability-lab",
     "operational-data-quality",
     "semantic-search-similarity",
